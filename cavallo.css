@@ -1,0 +1,495 @@
+/* Cavallo Music - Dark Theme CSS */
+/* Inspired by kanzlei-sessions.ch */
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #000924;
+    color: #ffffff;
+    padding: 20px;
+}
+
+a {
+    color: #04a4db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+a:visited {
+    color: #9ce6ff;
+}
+
+/* Header Section */
+.header-wrapper {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #A92525;
+    opacity: 0.61;
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.site-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.site-title a {
+    color: #ffffff;
+}
+
+.site-title a:hover {
+    color: #f0f0f0;
+}
+
+/* Navigation */
+.main-nav {
+    margin: 30px 0;
+    padding: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.main-nav li {
+    display: inline-block;
+}
+
+.main-nav a {
+    display: block;
+    padding: 10px 20px;
+    color: #04a4db;
+    font-weight: 500;
+    border: 2px solid #04a4db;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #04a4db;
+    color: #ffffff;
+}
+
+.main-nav a:visited {
+    color: #9ce6ff;
+}
+
+/* Main Content */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: #00AEEF;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: #04a4db;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+strong {
+    color: #00AEEF;
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    border-top: 2px solid #00AEEF;
+    margin: 40px 0;
+}
+
+/* Social Section */
+.social-section {
+    text-align: center;
+}
+
+.social-section h2 {
+    font-size: 2rem;
+}
+
+/* Event Section */
+.event-section time {
+    display: block;
+    font-size: 1.3rem;
+    color: #00AEEF;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.schedule {
+    background-color: rgba(0, 174, 239, 0.1);
+    padding: 20px;
+    border-left: 4px solid #00AEEF;
+    margin: 20px 0;
+}
+
+/* Event Image */
+.event-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.gallery-note {
+    text-align: center;
+    font-style: italic;
+}
+
+/* About Section */
+.about-section {
+    background-color: rgba(4, 164, 219, 0.05);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #04a4db;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .header-wrapper {
+        height: 250px;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-nav a {
+        text-align: center;
+        padding: 12px 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-image {
+        height: 200px;
+    }
+
+    .about-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-wrapper {
+        height: 200px;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .header-overlay {
+        display: none;
+    }
+
+    .main-nav {
+        display: none;
+    }
+}
+
+/* Table Styles (for membership fees) */
+.fee-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(4, 164, 219, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.fee-table th,
+.fee-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 174, 239, 0.3);
+}
+
+.fee-table th {
+    background-color: rgba(0, 174, 239, 0.2);
+    color: #00AEEF;
+    font-weight: 500;
+}
+
+.fee-table tr:hover {
+    background-color: rgba(4, 164, 219, 0.1);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00AEEF;
+    font-weight: 500;
+}
+
+.submit-btn {
+    background-color: #04a4db;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #00AEEF;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 174, 239, 0.3);
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.contact-card {
+    background-color: rgba(4, 164, 219, 0.05);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #04a4db;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(4, 164, 219, 0.1);
+}
+
+.contact-card h4 {
+    color: #00AEEF;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin: 30px 0;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #04a4db;
+    padding-bottom: 20px;
+}
+
+.timeline-item time {
+    display: inline-block;
+    background-color: #04a4db;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.timeline-item h4 {
+    color: #00AEEF;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+/* Highlights List */
+.highlights-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.highlights-list li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.highlights-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00AEEF;
+    font-weight: bold;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color: #04a4db;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid #04a4db;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #04a4db;
+    text-decoration: none;
+}
+
+/* Navigation active state for mobile */
+@media (max-width: 768px) {
+    .main-nav a.active {
+        background-color: #04a4db;
+        color: #ffffff;
+    }
+}
