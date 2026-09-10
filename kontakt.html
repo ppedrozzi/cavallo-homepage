@@ -21,14 +21,12 @@
 <div class="header-wrapper">
     <div class="header-overlay"></div>
     <img alt="Kulturverein Cavallo Music" src="pictures/header-bg.png" class="header-image"/>
-    <div class="header-content">
-        <h1 class="site-title"><a href="index.html">Kulturverein Cavallo Music</a></h1>
-    </div>
 </div>
 
 <!-- Navigation -->
 <nav class="main-nav">
     <ul>
+        <li class="nav-brand"><a href="index.html">KULTURVEREIN</a></li>
         <li><a href="index.html">GIG</a></li>
         <li><a href="jam.html">JAM</a></li>
         <li><a href="composer-jam.html">COMPOSER-JAM</a></li>
@@ -93,17 +91,17 @@
             <form action="mailto:info@cavallomusic.ch" method="post" enctype="text/plain">
                 <div class="form-group">
                     <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 5px 0; border-radius: 4px; border: 1px solid #04a4db; background: rgba(255,255,255,0.9); color: #000924;">
+                    <input type="text" id="name" name="name" class="form-input" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-Mail:</label><br>
-                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 5px 0; border-radius: 4px; border: 1px solid #04a4db; background: rgba(255,255,255,0.9); color: #000924;">
+                    <input type="email" id="email" name="email" class="form-input" required>
                 </div>
 
                 <div class="form-group">
                     <label for="subject">Betreff:</label><br>
-                    <select id="subject" name="subject" required style="width: 100%; padding: 10px; margin: 5px 0; border-radius: 4px; border: 1px solid #04a4db; background: rgba(255,255,255,0.9); color: #000924;">
+                    <select id="subject" name="subject" class="form-input" required>
                         <option value="allgemein">Allgemeine Anfrage</option>
                         <option value="mitgliedschaft">Mitgliedschaft</option>
                         <option value="jam">Jam Session</option>
@@ -116,7 +114,7 @@
 
                 <div class="form-group">
                     <label for="message">Nachricht:</label><br>
-                    <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 10px; margin: 5px 0; border-radius: 4px; border: 1px solid #04a4db; background: rgba(255,255,255,0.9); color: #000924;"></textarea>
+                    <textarea id="message" name="message" class="form-input" rows="6" required></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn">Nachricht senden</button>
