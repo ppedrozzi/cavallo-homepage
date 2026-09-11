@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -84,9 +85,6 @@ a:visited {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 .nav-row {
@@ -115,17 +113,6 @@ a:visited {
     transition: color 0.3s ease;
 }
 
-.main-nav a {
-    display: block;
-    padding: 3px 8px;
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    transition: color 0.3s ease;
-}
-
 .main-nav a.active {
     color: #f79646;
 }
@@ -133,70 +120,6 @@ a:visited {
 .main-nav a:hover,
 .main-nav a.active {
     color: #f79646;
-}
-
-/* Hamburger Menu Styles */
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-}
-
-.hamburger-icon {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-left: 20px;
-}
-
-.hamburger-icon:hover {
-    color: #f79646;
-}
-
-/* Dropdown Navigation - Hidden by default */
-.nav-dropdown {
-    display: none;
-    position: absolute;
-    right: 20px;
-    top: 52px;
-    background-color: #A92525;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 101;
-    min-width: 200px;
-    list-style: none;
-}
-
-.nav-dropdown.show {
-    display: block;
-}
-
-.nav-dropdown li {
-    display: block;
-    margin: 6px 0;
-}
-
-.nav-dropdown a {
-    display: block;
-    padding: 6px 8px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    text-align: left;
-    white-space: nowrap;
-}
-
-.nav-dropdown a.active {
-    color: #f79646 !important;
-}
-
-/* Main Content */
-.content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
 }
 
 /* Sections */
@@ -231,6 +154,13 @@ hr {
     margin: 30px 0;
 }
 
+/* Main Content Layout */
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
 /* Footer */
 .site-footer {
     margin-top: 40px;
@@ -257,42 +187,3 @@ hr {
     margin: 0 auto;
 }
 
-/* Responsive Design */
-@media (max-width: 1999px) {
-    body {
-        font-size: 14px;
-    }
-
-    .header-wrapper {
-        height: 250px;
-    }
-
-    /* Below 2000px: Only show hamburger menu, hide navigation */
-    .hamburger-menu {
-        display: block;
-    }
-    
-    .nav-row {
-        display: none !important;
-    }
-}
-
-@media (min-width: 2000px) {
-    /* At 2000px or more: Only show horizontal menus, hide hamburger */
-    .hamburger-menu {
-        display: none;
-    }
-    
-    .nav-row {
-        display: flex !important;
-    }
-}
-
-    .content {
-        padding: 20px 15px;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-}
