@@ -67,6 +67,87 @@
 
     <hr>
 
+    <h2>Anmeldung Mitgliedschaft/Gönner</h2>
+
+    <!-- Membership Registration Form -->
+    <form id="membershipForm" style="max-width: 500px; margin: 2em auto;">
+        <p id="formStatus"
+           style="padding: 10px; background-color: #e6ffe6; color: #006600; border: 1px solid #00cc00; border-radius: 4px; margin-bottom: 20px; display: none;">
+            Formular erfolgreich abgeschickt! Vielen Dank für Ihr Interesse an der Mitgliedschaft.
+        </p>
+
+        <p>
+            <label for="email" style="display: block; margin-bottom: 0.5em; font-weight: bold;">
+                Ihre E-Mail-Adresse:
+            </label>
+            <input id="email" name="email" required style="width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px;"
+                   type="email">
+        </p>
+        <p>
+            <label for="message" style="display: block; margin-bottom: 0.5em; font-weight: bold;">
+                Bitte Vorname/Name, Adresse und Telefonnummer angeben und gerne deine Nachricht:
+            </label>
+            <textarea id="message" name="message" required rows="6"
+                      style="width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px; font-family: inherit;"></textarea>
+        </p>
+        <p>
+            <input id="newsletter" name="newsletter" required style="margin-right: 0.5em;" type="checkbox">
+            <label for="newsletter" style="display: inline;">
+                Ich bin damit einverstanden, Cavallo News zu erhalten.
+            </label>
+        </p>
+        <p>
+            <button style="background-color: #8B4513; color: white; border: none; padding: 0.75em 1.5em; border-radius: 4px; cursor: pointer; font-weight: bold;"
+                    type="submit">
+                SENDEN
+            </button>
+        </p>
+    </form>
+
+    <script>
+    document.getElementById('membershipForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent form from actually submitting
+        
+        // Get form values
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const newsletterConsent = document.getElementById('newsletter').checked;
+        
+        // Create confirmation message
+        const confirmationMessage = `
+            ✅ Mitgliedschaftsanfrage gesendet!
+            
+            Ihre Angaben:
+            
+            E-Mail: ${email}
+            
+            Nachricht/Kontaktdaten:
+            ${message}
+            
+            Newsletter: ${newsletterConsent ? 'Ja, ich möchte News erhalten' : 'Nein, ich möchte keine News'}
+            
+            ==========================================
+            
+            Vielen Dank für Ihr Interesse an der Mitgliedschaft
+            bei Cavallo Music!
+            
+            Wir werden uns in Kürze mit weiteren Informationen
+            bei Ihnen melden.
+        `;
+        
+        // Show status message
+        document.getElementById('formStatus').innerHTML = confirmationMessage.replace(/\n/g, '<br>');
+        document.getElementById('formStatus').style.display = 'block';
+        
+        // Clear form
+        this.reset();
+    });
+
+    </script>
+
+
+    <hr>
+
     <h2>DANKE EUCH ALLEN FÜR DIE GROSSZÜGIGE UNTERSTÜTZUNG!</h2>
     <p>
         Ein herzliches Dankeschön geht an alle unsere Unterstützer, Gönner und Mitglieder des Vereins sowie an<br>
