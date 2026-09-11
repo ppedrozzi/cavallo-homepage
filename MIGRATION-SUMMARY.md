@@ -79,7 +79,7 @@ Successfully migrated **cavallomusic.ch** from BaseKit (website builder) to a cl
   - gallery-1.jpg (51 KB)
   - gallery-2.jpg (383 KB)
   - gallery-3.jpg (1 MB)
-  - favicon.svg (custom SVG)
+  - favicon-16x16.png (custom SVG)
 
 ### Documentation
 

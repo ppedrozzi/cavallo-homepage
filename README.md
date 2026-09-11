@@ -30,7 +30,7 @@ cavallo-homepage/
     ├── gallery-1.jpg
     ├── gallery-2.jpg
     ├── gallery-3.jpg
-    └── favicon.svg
+    └── favicon-16x16.png
 ```
 
 ## 🎨 Design Philosophy
