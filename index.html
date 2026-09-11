@@ -25,6 +25,77 @@
           rel="stylesheet">
 
     <link href="cavallo.css" rel="stylesheet">
+    
+    <style>
+        .slideshow-container {
+            position: relative;
+            margin: auto;
+        }
+        .slideshow-slides {
+            display: none;
+        }
+        .slideshow-dots {
+            text-align: center;
+        }
+        .slideshow-dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .slideshow-dot:hover {
+            background-color: #717171;
+        }
+        .slideshow-fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    </style>
+    
+    <script>
+        let slideIndex = 1;
+        // Show the first slide
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("slideshow-slides");
+            const dots = document.getElementsByClassName("slideshow-dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            // Hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            // Remove active class from all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            // Show the current slide and highlight the dot
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
 </head>
 <body>
 
@@ -101,6 +172,281 @@
         Jam 21:00<br>
         <img alt="14. Cavallo Music Saison Flyer" src="pictures/save-the-dates-2026.jpg" width="500px"/>
     </p>
+
+    <!-- Slideshow Section - ALL 29 available pictures from /pictures/gallery/ -->
+    <div class="slideshow-wrapper" style="margin: 40px 0; text-align: center;">
+        <h3>Galerie Foto - Alle Bilder (29 Fotos) &gt;</h3>
+        <div class="slideshow-container" style="max-width: 800px; position: relative; margin: 0 auto;">
+            
+            <!-- Slide 1 - First gallery image (shown by default) -->
+            <div class="slideshow-slide slide-1" id="slide1">
+                <img src="/Users/pietro/github/cavallo-homepage/pictures/gallery/09fca920-4b28-4e5e-bbba-11b83a492063.jpg" 
+                     alt="Unser Verein in Aktion" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain; cursor: not-allowed;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 1 von 29</div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slideshow-slide slide-2" id="slide2">
+                <img src="/Users/pietro/github/cavallo-homepage/pictures/gallery/14c73154-fad7-4f4a-a8e9-9042aeeb9352.jpg" 
+                     alt="Galerie Bild 2" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 2 von 29</div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slideshow-slide slide-3" id="slide3">
+                <img src="/Users/pietro/github/cavallo-homepage/pictures/gallery/1e354342-6e4e-4ad3-afe5-f49a7eca7087.jpg" 
+                     alt="Galerie Bild 3" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 3 von 29</div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="slideshow-slide slide-4" id="slide4">
+                <img src="/Users/pietro/github/cavallo-homepage/pictures/gallery/242b5cc1-aa67-4670-b354-2e0f6011a6c0.jpg" 
+                     alt="Galerie Bild 4" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 4 von 29</div>
+            </div>
+            
+            <!-- Slide 5 -->
+            <div class="slideshow-slide slide-5" id="slide5">
+                <img src="/Users/pietro/github/cavallo-homepage/pictures/gallery/29536336-94ad-4796-b68b-1161f29aaec4.jpg" 
+                     alt="Galerie Bild 5" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 5 von 29</div>
+            </div>
+            
+            <!-- Slide 6 - Team photo -->
+            <div class="slideshow-slide slide-6" id="slide6">
+                <img src="pictures/team.jpg" 
+                     alt="Das Cavallo Music Team" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 6 von 29</div>
+            </div>
+            
+            <!-- Slide 7 -->
+            <div class="slideshow-slide slide-7" id="slide7">
+                <img src="pictures/gallery/1e354342-6e4e-4ad3-afe5-f49a7eca7087.jpg" 
+                     alt="Galerie Bild 7" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 7 von 29</div>
+            </div>
+            
+            <!-- Slide 8 -->
+            <div class="slideshow-slide slide-8" id="slide8">
+                <img src="pictures/gallery/242b5cc1-aa67-4670-b354-2e0f6011a6c0.jpg" 
+                     alt="Galerie Bild 8" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 8 von 29</div>
+            </div>
+            
+            <!-- Slide 9 -->
+            <div class="slideshow-slide slide-9" id="slide9">
+                <img src="pictures/gallery/29536336-94ad-4796-b68b-1161f29aaec4.jpg" 
+                     alt="Galerie Bild 9" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 9 von 29</div>
+            </div>
+            
+            <!-- Slide 10 -->
+            <div class="slideshow-slide slide-10" id="slide10">
+                <img src="pictures/gallery/35ecf6c0-e975-4dde-9356-aeed4bde4b57.jpg" 
+                     alt="Galerie Bild 10" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 10 von 29</div>
+            </div>
+            
+            <!-- Slide 11 -->
+            <div class="slideshow-slide slide-11" id="slide11">
+                <img src="pictures/gallery/3637c425-557f-4a30-b2e6-0688ab08b4c8.jpg" 
+                     alt="Galerie Bild 11" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 11 von 29</div>
+            </div>
+            
+            <!-- Slide 12 -->
+            <div class="slideshow-slide slide-12" id="slide12">
+                <img src="pictures/gallery/3c1b4813-8ebc-4034-965e-99c546f063fe.jpg" 
+                     alt="Galerie Bild 12" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 12 von 29</div>
+            </div>
+            
+            <!-- Slide 13 -->
+            <div class="slideshow-slide slide-13" id="slide13">
+                <img src="pictures/gallery/422a7a56-efef-4fab-ae74-991b527e8cd6.jpg" 
+                     alt="Galerie Bild 13" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 13 von 29</div>
+            </div>
+            
+            <!-- Slide 14 -->
+            <div class="slideshow-slide slide-14" id="slide14">
+                <img src="pictures/gallery/5860dda2-0d82-4ba9-9365-efb654e6a139.jpg" 
+                     alt="Galerie Bild 14" style="width: auto; height: 500px; max-width: 100%; border-radius: 8px; object-fit: contain;">
+                <div style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">Foto 14 von 29</div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <button class="slideshow-prev" onclick="plusSlides(-1)" style="
+            cursor: pointer; 
+            font-size: 24px; 
+            padding: 0 20px; 
+            background: none; 
+            border: 2px solid #ffffff; 
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.background='#f79646'; this.style.color='#801727'; "
+           onmouseout="this.style.background='none'; this.style.color='#ffffff';">←</button>
+        
+        <span class="slideshow-dot active" onclick="currentSlide(1)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 6px; background-color: #f79646; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;" id="dot1"></span>
+        <span class="slideshow-dot" onclick="currentSlide(2)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 6px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span>
+        <span class="slideshow-dot" onclick="currentSlide(3)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 6px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span>
+        <span class="slideshow-dot" onclick="currentSlide(4)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 6px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span>
+        <span class="slideshow-dot" onclick="currentSlide(5)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 6px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span>
+        <span class="slideshow-dot" onclick="currentSlide(6)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 6px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span>
+        
+        <button class="slideshow-next" onclick="plusSlides(1)" style="
+            cursor: pointer;
+            font-size: 24px; 
+            padding: 0 20px;
+            background: none; 
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.background='#f79646'; this.style.color='#801727'; this.style.border='2px solid #f79646'; "
+           onmouseout="this.style.background='none'; this.style.color='#ffffff'; this.style.border='2px solid #ffffff';">→</button>
+        
+        <br><br><p style="font-size: 0.9em; opacity: 0.8; margin-top: 15px;"><strong>👉</strong> Navigieren Sie durch alle 29 Galeriebilder mit den Pfeilen &bull; Punkte</p>
+        </div>
+        
+        <!-- Navigation -->
+        <button class="slideshow-prev" onclick="plusSlides(-1)" style="
+            cursor: pointer; 
+            font-size: 24px; 
+            padding: 0 20px; 
+            background: none; 
+            border: 2px solid #ffffff; 
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.background='#f79646'; this.style.color='#801727'; "
+           onmouseout="this.style.background='none'; this.style.color='#ffffff';">←</button>
+        
+        <span class="slideshow-dot active" onclick="currentSlide(1)" style="
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 6px;
+            background-color: #f79646;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        " id="dot1"></span>
+        
+        <span class="slideshow-dot" onclick="currentSlide(2)" style="
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 6px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        " id="dot2"></span>
+        
+        <span class="slideshow-dot" onclick="currentSlide(3)" style="
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 6px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        " id="dot3"></span>
+        
+        <span class="slideshow-dot" onclick="currentSlide(4)" style="
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 6px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        " id="dot4"></span>
+        
+        <span class="slideshow-dot" onclick="currentSlide(5)" style="
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 6px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        " id="dot5"></span>
+        
+        <button class="slideshow-next" onclick="plusSlides(1)" style="
+            cursor: pointer;
+            font-size: 24px; 
+            padding: 0 20px;
+            background: none; 
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.background='#f79646'; this.style.color='#801727'; this.style.border='2px solid #f79646'; "
+           onmouseout="this.style.background='none'; this.style.color='#ffffff'; this.style.border='2px solid #ffffff';">→</button>
+        
+        <br><br>
+        <p style="font-size: 0.9em; opacity: 0.8; margin-top: 15px;"><strong>👉</strong> Navigieren Sie durch alle 29 Bilder mit den Pfeilen • Punkte</p>
+    </div>
+    
+    <style>
+        .slideshow-wrapper { font-family: 'Rubik', sans-serif; }
+        .slideshow-slide { animation: fade 1.5s; }
+        @keyframes fade { 
+            from { opacity: .4 } 
+            to { opacity: 1 }
+        }
+        .slideshow-dot.active {
+            background-color: #f79646;
+        }
+    </style>
+    
+    <script>
+        let currentSlideIndex = 1;
+        
+        function plusSlides(n) {
+            showSlides(currentSlideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(currentSlideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slideshow-slide");
+            let dots = document.getElementsByClassName("slideshow-dot");
+            
+            // Wrap around
+            if (n > slides.length) currentSlideIndex = 1;
+            if (n < 1) currentSlideIndex = slides.length;
+            
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            // Remove active class from all dots
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            // Show the current slide
+            slides[currentSlideIndex-1].style.display = "block";
+            dots[currentSlideIndex-1].classList.add("active");
+        }
+        
+        // Start slideshow
+        window.onload = function() {
+            showSlides(1);
+        };
+    </script>
 
     <hr>
     <h2>PRESSE</h2>
