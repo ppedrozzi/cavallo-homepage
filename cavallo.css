@@ -172,6 +172,15 @@ hr {
     font-size: 0.9rem;
 }
 
+/* Image Styles */
+.full-width-img {
+    max-width: 700px;
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
