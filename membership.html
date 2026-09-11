@@ -2,25 +2,27 @@
 <html lang="de">
 <head>
     <title>Cavallo Music - Mitgliedschaft Anmeldung</title>
-    <link rel="canonical" href="https://www.cavallomusic.ch/membership.html" />
-    <link rel="icon" href="pictures/favicon.svg" type="image/svg+xml">
+    <link href="https://www.cavallomusic.ch/membership.html" rel="canonical"/>
+    <link href="pictures/favicon.svg" rel="icon" type="image/svg+xml">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Werde Mitglied beim Kulturverein Cavallo Music - Unterstütze die Jazz- und Musikszene am Zürichsee">
-    <meta name="keywords" content="Mitgliedschaft, Verein, Unterstützen, Kultur, Stäfa">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="cavallo.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Werde Mitglied beim Kulturverein Cavallo Music - Unterstütze die Jazz- und Musikszene am Zürichsee"
+          name="description">
+    <meta content="Mitgliedschaft, Verein, Unterstützen, Kultur, Stäfa" name="keywords">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Rubik:wght@400;500&display=swap"
+          rel="stylesheet">
+
+    <link href="cavallo.css" rel="stylesheet">
 </head>
 <body>
 
 <!-- Header Section -->
 <div class="header-wrapper">
     <div class="header-overlay"></div>
-    <img alt="Kulturverein Cavallo Music" src="pictures/header-bg.png" class="header-image"/>
+    <img alt="Kulturverein Cavallo Music" class="header-image" src="pictures/header-bg.png"/>
 </div>
 
 <!-- Navigation -->
@@ -29,7 +31,7 @@
         <li><a href="index.html">GIG</a></li>
         <li><a href="jam.html">JAM</a></li>
         <li><a href="composer-jam.html">COMPOSER-JAM</a></li>
-        <li><a href="membership.html" class="active">MITGLIEDSCHAFT</a></li>
+        <li><a class="active" href="membership.html">MITGLIEDSCHAFT</a></li>
         <li><a href="verein.html">VEREIN</a></li>
         <li><a href="kontakt.html">TEAM / KONTAKT</a></li>
         <li><a href="archive.html">Jam Sessions 2013-2026</a></li>
@@ -38,150 +40,59 @@
 
 <main class="content">
 
-    <section class="membership-section">
-        <h2>Mitgliedschaft Anmeldung</h2>
-        
-        <div class="about-section">
-            <h3>Unterstütze die Musikszene am Zürichsee!</h3>
-            <p>
-                Der Kulturverein Cavallo Music lebt von seinen Mitgliedern. Mit deiner Mitgliedschaft 
-                trägst du direkt zur Förderung von Live-Musik, Jam Sessions und kulturellem Austausch 
-                in unserer Region bei.
-            </p>
-        </div>
-
-        <h3>Vorteile einer Mitgliedschaft</h3>
-        <ul>
-            <li>Unterstützung der lokalen Musik- und Kulturszene</li>
-            <li>Mitbestimmungsrecht an der Generalversammlung</li>
-            <li>Einladung zu exklusiven Mitglieder-Anlässen</li>
-            <li>Rabatte bei ausgewählten Veranstaltungen</li>
-            <li>Regelmässige Informationen über Vereinsaktivitäten</li>
-            <li>Gemeinschaft mit musikbegeisterten Menschen</li>
-        </ul>
-
-        <h3>Mitgliederbeiträge</h3>
-        <table class="fee-table">
-            <thead>
-                <tr>
-                    <th>Kategorie</th>
-                    <th>Jährlicher Beitrag</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Einzelmitglied</td>
-                    <td>CHF 50.-</td>
-                </tr>
-                <tr>
-                    <td>Paar-Mitgliedschaft</td>
-                    <td>CHF 80.-</td>
-                </tr>
-                <tr>
-                    <td>Fördermitglied</td>
-                    <td>CHF 100.- oder mehr</td>
-                </tr>
-                <tr>
-                    <td>Jugendliche (unter 25)</td>
-                    <td>CHF 25.-</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3>Anmeldung</h3>
-        <p>
-            Möchtest du Mitglied werden? Fülle das folgende Formular aus oder kontaktiere uns direkt.
-        </p>
-
-        <div class="registration-form">
-            <form action="mailto:info@cavallomusic.ch" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label for="name">Name / Vorname:</label><br>
-                    <input type="text" id="name" name="name" class="form-input" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="address">Adresse:</label><br>
-                    <input type="text" id="address" name="address" class="form-input" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">E-Mail:</label><br>
-                    <input type="email" id="email" name="email" class="form-input" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Telefon:</label><br>
-                    <input type="tel" id="phone" name="phone" class="form-input">
-                </div>
-
-                <div class="form-group">
-                    <label for="membership-type">Mitgliedschaftstyp:</label><br>
-                    <select id="membership-type" name="membership_type" class="form-input" required>
-                        <option value="einzel">Einzelmitglied (CHF 50.-)</option>
-                        <option value="paar">Paar-Mitgliedschaft (CHF 80.-)</option>
-                        <option value="foerder">Fördermitglied (CHF 100.-+)</option>
-                        <option value="jugend">Jugendliche (CHF 25.-)</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Nachricht (optional):</label><br>
-                    <textarea id="message" name="message" class="form-input" rows="4"></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Anmeldung absenden</button>
-            </form>
-        </div>
-
-        <p style="margin-top: 30px;">
-            Alternativ kannst du uns auch direkt eine E-Mail senden an:<br>
-            <a href="mailto:info@cavallomusic.ch">info@cavallomusic.ch</a>
-        </p>
-    </section>
+    <h2>MITGLIEDSCHAFT</h2>
+    <p>
+        Dank grosszügiger Unterstützung von Freunden, Firmen und öffentlichen Geldern, ist das Cavallo zu dem gewachsen,
+        was es heute ist: ein Treffpunkt für Musiker und Musikliebhaber.<br>
+        <br>
+        Mit der Mitgliedschaft beim Cavallo Music Kulturverein unterstützt du:<br>
+        <br>
+        - 10 Konzert- und Jamabende im Rössli Stäfa während der Wintersaison<br>
+        - 2 Openair-Konzert- und Jamabende<br>
+        - einen Teil der Gage für die Konzert-Musiker<br>
+        - Food & Drinks für die Konzert-Musiker<br>
+        - Förderung von Nachwuchsbands<br>
+        - Miete Saal, Equipment, Auf- und Abbau<br>
+        - Werbung<br>
+        <br>
+        Werde Mitglied in unserem "Cavallo Music Kulturverein" und unterstütze unseren wertvollen Kulturanlass mit
+        deinem Jahresbeitrag. Herzlichen Dank!<br>
+        <br>
+        Mitglied CHF 50.00<br>
+        Gönner-Mitglied ab CHF 100.00<br>
+        Gönner ab CHF 500.00<br>
+        <br>
+        IBAN: CH65 0070 0110 0065 7943 6<br>
+    </p>
 
     <hr>
 
-    <section class="payment-section">
-        <h3>Bezahlung</h3>
-        <p>
-            Nach Erhalt deiner Anmeldung senden wir dir die Bankverbindung für die 
-            Überweisung des Mitgliederbeitrags zu.
-        </p>
-        <p>
-            <strong>Bankverbindung:</strong><br>
-            Wird nach Anmeldung mitgeteilt
-        </p>
-    </section>
-
-    <hr>
-
-    <section class="questions-section">
-        <h3>Fragen?</h3>
-        <p>
-            Bei Fragen zur Mitgliedschaft kontaktiere uns gerne:
-        </p>
-        <p>
-            <a href="kontakt.html">📧 Kontaktformular</a><br>
-            oder über Social Media
-        </p>
-    </section>
+    <h2>DANKE EUCH ALLEN FÜR DIE GROSSZÜGIGE UNTERSTÜTZUNG!</h2>
+    <p>
+        Ein herzliches Dankeschön geht an alle unsere Unterstützer, Gönner und Mitglieder des Vereins sowie an<br>
+        <br>
+        Gemeinde Stäfa, Fachstelle Kultur des Kanton Zürich, Migros Kulturprozent, Geoterra, Stäger AG, Sensirion,
+        Genossenschaft Kulturhaus Rössli Stäfa, Kulturkarussell Stäfa, Zürcher Kantonalbank, Aurel, Immanuel, Claude,
+        Daria, Henrik, Fotostudio Samuel Künzli, Martin, Martin, Martin, Curdin, Felix, Bruno, Marcel, Jay, Andy, Genio,
+        Karin, Karin, Hannes, Röstbar, Thomas Stutz, Vadim, Christian, Martin, Marianne, Richard, Elmar, Kriz, Andrea,
+        Genio, Treffpunkt, Marco, Sabrina, Claudia, Rössli-Beiz, Stefan, Johannes, Maryse, Zora, Dani, Moschti, Familie
+        Gut, Lukas, Lea, Mika, und auch denen die wir allfällig vergessen haben.<br>
+    </p>
 
 </main>
 
-<!-- Footer -->
 <footer class="site-footer">
     <hr>
     <p>
         <strong>Kulturverein Cavallo Music</strong><br>
         Stäfa, Zürichsee, Schweiz<br>
-        <a href="kontakt.html">Kontakt</a> | 
-        <a href="verein.html">Über uns</a> | 
+        <a href="kontakt.html">Kontakt</a> |
+        <a href="verein.html">Über uns</a> |
         <a href="index.html">Home</a>
     </p>
     <p class="footer-links">
-        <a href="https://www.facebook.com/cavallomusic" target="_blank" rel="noopener">Facebook</a> | 
-        <a href="https://instagram.com/cavallomusic" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/cavallomusic" rel="noopener" target="_blank">Facebook</a> |
+        <a href="https://instagram.com/cavallomusic" rel="noopener" target="_blank">Instagram</a>
     </p>
 </footer>
 
