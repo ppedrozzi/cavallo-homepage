@@ -162,3 +162,42 @@ hr {
     display: block;
     margin: 0 auto;
 }
+
+/* Container for image on left and text on right */
+.image-text-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.image-text-container p {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* Image positioned to the left */
+.left-image {
+    max-width: 400px;
+    height: auto;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+/* Responsive behavior for narrow screens */
+@media (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .left-image {
+        margin: 0 auto 15px;
+        display: block;
+    }
+    
+    /* Remove margin below images in mobile view since text will be below */
+    .image-text-container img {
+        margin-bottom: 15px;
+    }
+}
